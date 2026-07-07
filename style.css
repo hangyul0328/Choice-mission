@@ -1,0 +1,182 @@
+:root {
+  --ink: #3d2c4b;
+  --ink-soft: #8a7a9b;
+  --paper: #fffdf9;
+
+  --coral: #ff6b6b;
+  --coral-soft: #ffe3e3;
+  --sky: #3aa8e0;
+  --sky-soft: #dff3ff;
+  --sun: #f5a623;
+  --sun-soft: #fff2d6;
+  --mint: #2ea88a;
+  --mint-soft: #ddf7ee;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  min-height: 100vh;
+}
+
+body {
+  background: linear-gradient(160deg, #fff4e6 0%, #ffeef5 35%, #eaf6ff 70%, #eafff2 100%);
+  color: var(--ink);
+  font-family: "Nunito", sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 48px 18px;
+}
+
+.hub {
+  width: 100%;
+  max-width: 900px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+}
+
+.hero {
+  text-align: center;
+}
+
+.eyebrow {
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--coral);
+  margin: 0 0 10px;
+  letter-spacing: 0.3px;
+}
+
+.logo {
+  font-family: "Baloo 2", sans-serif;
+  font-size: clamp(34px, 7vw, 54px);
+  font-weight: 800;
+  margin: 0;
+  color: var(--ink);
+  line-height: 1.15;
+}
+
+.logo span {
+  color: var(--sky);
+  position: relative;
+}
+
+.sub {
+  margin: 12px 0 0;
+  color: var(--ink-soft);
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 24px;
+  width: 100%;
+}
+
+.card {
+  position: relative;
+  background: var(--paper);
+  border: 3px solid var(--ink);
+  border-radius: 26px;
+  padding: 26px 24px 24px;
+  text-decoration: none;
+  color: var(--ink);
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  box-shadow: 6px 6px 0 var(--ink);
+  transition: transform 0.18s ease, box-shadow 0.18s ease, rotate 0.18s ease;
+  rotate: -1.5deg;
+}
+
+.card:nth-child(2) { rotate: 1.5deg; }
+.card:nth-child(3) { rotate: 1.5deg; }
+.card:nth-child(4) { rotate: -1.5deg; }
+
+.card:hover,
+.card:focus-visible {
+  rotate: 0deg;
+  transform: translateY(-6px);
+  box-shadow: 9px 9px 0 var(--ink);
+}
+
+.badge {
+  width: 60px;
+  height: 60px;
+  border-radius: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 3px solid var(--ink);
+}
+
+.card--coral .badge { background: var(--coral-soft); color: var(--coral); }
+.card--sky .badge   { background: var(--sky-soft);   color: var(--sky); }
+.card--sun .badge   { background: var(--sun-soft);   color: var(--sun); }
+.card--mint .badge  { background: var(--mint-soft);  color: var(--mint); }
+
+.icon {
+  width: 32px;
+  height: 32px;
+}
+
+.card-title {
+  font-family: "Baloo 2", sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+  margin: 6px 0 0;
+}
+
+.card-desc {
+  font-size: 13.5px;
+  color: var(--ink-soft);
+  font-weight: 600;
+  margin: 0;
+  flex-grow: 1;
+}
+
+.card-cta {
+  font-size: 13px;
+  font-weight: 800;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.card--coral .card-cta { color: var(--coral); }
+.card--sky .card-cta   { color: var(--sky); }
+.card--sun .card-cta   { color: var(--sun); }
+.card--mint .card-cta  { color: var(--mint); }
+
+.card-cta i {
+  font-style: normal;
+  transition: transform 0.18s ease;
+}
+
+.card:hover .card-cta i,
+.card:focus-visible .card-cta i {
+  transform: translateX(4px);
+}
+
+.hint {
+  font-size: 13px;
+  color: var(--ink-soft);
+  font-weight: 600;
+}
+
+@media (max-width: 560px) {
+  .cards {
+    grid-template-columns: 1fr;
+  }
+  .card {
+    rotate: 0deg !important;
+  }
+}

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>오늘의 선택</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;700;800&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <main class="hub">
+    <header class="hero">
+      <p class="eyebrow">✨ 오늘은 뭘 해볼까?</p>
+      <h1 class="logo">골라 <span>보세요</span></h1>
+      <p class="sub">아래 카드 중 하나를 눌러보세요</p>
+    </header>
+
+    <div class="cards" id="cards">
+
+      <a class="card card--coral" data-index="0" href="https://app.notion.com/p/mbti-3918284e0b8f80d2941ad9a687ff88ea" target="_blank" rel="noopener">
+        <div class="badge">
+          <svg viewBox="0 0 64 64" class="icon">
+            <path d="M32 50 C14 38 6 28 6 18 C6 9 13 4 20 4 C25 4 29 7 32 12 C35 7 39 4 44 4 C51 4 58 9 58 18 C58 28 50 38 32 50 Z" fill="currentColor"/>
+          </svg>
+        </div>
+        <h2 class="card-title">MBTI 궁합 찾기</h2>
+        <p class="card-desc">나와 잘 맞는 유형은?</p>
+        <span class="card-cta">시작하기 <i>&rarr;</i></span>
+      </a>
+
+      <a class="card card--sky" data-index="1" href="https://app.notion.com/p/3918284e0b8f80eea6adc40e07db77c8" target="_blank" rel="noopener">
+        <div class="badge">
+          <svg viewBox="0 0 64 64" class="icon">
+            <circle cx="32" cy="32" r="20" fill="none" stroke="currentColor" stroke-width="6"/>
+            <circle cx="32" cy="32" r="9" fill="none" stroke="currentColor" stroke-width="6"/>
+            <circle cx="32" cy="32" r="2.5" fill="currentColor"/>
+          </svg>
+        </div>
+        <h2 class="card-title">에임 트레이너</h2>
+        <p class="card-desc">반응속도를 테스트하세요</p>
+        <span class="card-cta">시작하기 <i>&rarr;</i></span>
+      </a>
+
+      <a class="card card--sun" data-index="2" href="https://app.notion.com/p/3918284e0b8f800da85cfab2c37de192" target="_blank" rel="noopener">
+        <div class="badge">
+          <svg viewBox="0 0 64 64" class="icon">
+            <circle cx="20" cy="14" r="7" fill="currentColor"/>
+            <path d="M20 21 L20 36 M20 25 L9 32 M20 25 L31 21 M20 36 L11 50 M20 36 L31 48" fill="none" stroke="currentColor" stroke-width="6" stroke-linecap="round"/>
+            <rect x="42" y="42" width="9" height="16" rx="3" fill="currentColor"/>
+          </svg>
+        </div>
+        <h2 class="card-title">장애물 뛰기</h2>
+        <p class="card-desc">타이밍 맞춰 점프하세요</p>
+        <span class="card-cta">시작하기 <i>&rarr;</i></span>
+      </a>
+
+      <a class="card card--mint" data-index="3" href="https://app.notion.com/p/3918284e0b8f80999a76df88480b908f" target="_blank" rel="noopener">
+        <div class="badge">
+          <svg viewBox="0 0 64 64" class="icon">
+            <rect x="8" y="6" width="12" height="12" rx="4" fill="currentColor" opacity="0.5"/>
+            <rect x="28" y="18" width="12" height="12" rx="4" fill="currentColor" opacity="0.75"/>
+            <rect x="46" y="8" width="12" height="12" rx="4" fill="currentColor" opacity="0.5"/>
+            <rect x="20" y="44" width="24" height="12" rx="4" fill="currentColor"/>
+          </svg>
+        </div>
+        <h2 class="card-title">드랍볼 피하기</h2>
+        <p class="card-desc">떨어지는 블록을 피하세요</p>
+        <span class="card-cta">시작하기 <i>&rarr;</i></span>
+      </a>
+
+    </div>
+  </main>
+
+<script src="script.js"></script>
+</body>
+</html>
